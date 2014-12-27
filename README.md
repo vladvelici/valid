@@ -1,4 +1,4 @@
-valid
+valid [![GoDoc](https://godoc.org/github.com/vladvelici/valid?status.svg)](https://godoc.org/github.com/vladvelici/valid)
 =====
 
 Simple input validation for Go. This package does not deal with any form of input processing.

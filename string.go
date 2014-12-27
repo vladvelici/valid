@@ -13,7 +13,7 @@ type StringValidator interface {
 	Validate(string) error
 }
 
-// A StringFucn takes a value to validate and returns a validation error.
+// A StringFunc takes a value to validate and returns a validation error.
 //
 // This type implements the StringValidator interface, thus any functions with this
 // signature can be casted to StringFunc and used as a StringValidator.

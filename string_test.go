@@ -1,7 +1,6 @@
 package valid
 
 import (
-	"errors"
 	"testing"
 )
 
@@ -11,8 +10,6 @@ type stringTest struct {
 	shouldPass bool
 	message    string
 }
-
-var fail = errors.New("a")
 
 var strTests = []stringTest{
 	// Uncompiled regexp

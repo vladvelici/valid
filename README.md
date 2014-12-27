@@ -38,3 +38,19 @@ Current validators
 - **Regex** - Validate using regular expression, given as string.
 - **RegexCompiled** - Validate using regular expression, given as `*regexp.Regexp`.
 
+Create custom validators
+========================
+
+Validators are different for each type, but they all have similar interfaces.
+
+### Strings
+
+The interface `StringValidator` has one method `Validate(string) error`. Any struct that
+implements this interface can be used as a string validator.
+
+A convenience type is also defined: `type StringFunc func(val string) error`. This type implements the 
+`StringValidator` interface, so any function with the above signature can be used as a validator.
+
+### Example
+
+You can see code for a custom validator here https://gist.github.com/vladvelici/00679f8dff9e205cc157.

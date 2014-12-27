@@ -1,3 +1,4 @@
+/*
 valid
 =====
 
@@ -9,7 +10,6 @@ package to deal with web form input processing. There are already plenty of libr
 Usage
 =====
 
-    ```go
     // A variable to validate.
     var input string
 
@@ -19,7 +19,6 @@ Usage
     errs := valid.String(input, Nonempty("This field is required."), MaxLen(20, "Input is too long."))
 
     // errs is an []error containing errors with the relevant error messages.
-    ```
 
 Current validators
 ==================
@@ -48,9 +47,11 @@ Validators are different for each type, but they all have similar interfaces.
 The interface `StringValidator` has one method `Validate(string) error`. Any struct that
 implements this interface can be used as a string validator.
 
-A convenience type is also defined: `type StringFunc func(val string) error`. This type implements the 
+A convenience type is also defined: `type StringFunc func(val string) error`. This type implements the
 `StringValidator` interface, so any function with the above signature can be used as a validator.
 
 ### Example
 
 You can see code for a custom validator here https://gist.github.com/vladvelici/00679f8dff9e205cc157.
+*/
+package valid

@@ -111,4 +111,10 @@ func TestString(t *testing.T) {
 			t.Errorf("String() returns the wrong message: errs[%d] = %#v instead of %#v", i, errs[i].Error(), msg)
 		}
 	}
+
+	// should return nil for valid inputs
+	errs = String("hello@example.com", Email("Not an e-mail address."))
+	if errs != nil {
+		t.Errorf("String() does not return nil on valid input.")
+	}
 }

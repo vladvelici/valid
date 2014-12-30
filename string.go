@@ -27,7 +27,7 @@ func (s StringFunc) Validate(val string) error {
 // String applies a list of StringValidators to a string value and returns a list of
 // aggregated errors.
 func String(val string, v ...StringValidator) []error {
-	errors := make([]error, 0)
+	var errors []error
 	for _, validator := range v {
 		err := validator.Validate(val)
 		if err != nil {
